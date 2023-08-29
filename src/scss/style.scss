@@ -1,0 +1,86 @@
+@import './fonts.scss';
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: TT Lakes;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #99999953;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 750px;
+  @media (min-width: 769px) {
+    max-width: 1067px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  background-color: $color-section;
+  overflow: hidden;
+  @media (min-width: 1330px) {
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 1426px;
+    display: flex;
+  }
+}
+
+.blur {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.5s ease;
+  &_active {
+    top: 0;
+    opacity: 0.9;
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+@import './blocks/icon.scss';
+@import './blocks/header.scss';
+@import './blocks/my-hr.scss';
+@import './blocks/more.scss';
+@import './blocks/btn.scss';
+@import './blocks/swiper.scss';
+@import './blocks/section.scss';
+@import './blocks/section-promo.scss';
+@import './blocks/section-brands.scss';
+@import './blocks/section-technique.scss';
+@import './blocks/section-services.scss';
+@import './blocks/header-services.scss';
+@import './blocks/footer.scss';
+@import './blocks/aside.scss';
+@import './blocks/modal.scss';
+@import './blocks/modal-feedback.scss';
+@import './blocks/modal-call.scss';

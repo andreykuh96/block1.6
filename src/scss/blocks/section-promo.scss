@@ -1,0 +1,138 @@
+.section-promo {
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 1330px) {
+      margin-bottom: 8px;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    color: $color-text;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    @media (min-width: 321px) {
+      margin-bottom: 32px;
+    }
+    @media (min-width: 1330px) {
+      margin-bottom: 0;
+    }
+  }
+  &__feedback-wrapper {
+    display: none;
+    @media (min-width: 1330px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 32px;
+    }
+  }
+  &__repair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__list {
+    min-width: 100%;
+    display: flex;
+    column-gap: 5px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (min-width: 1330px) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    flex: 1 0 auto;
+    @media (min-width: 1330px) {
+      flex: 0 0 auto;
+    }
+  }
+  &__btn {
+    padding: 8px 15px;
+    min-height: 40px;
+    background-color: $color-section;
+    color: $color-text--gray;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+      transition: all 0.5s ease;
+    }
+    &_active {
+      border-radius: 6px;
+      border: 2px solid #b8ffec;
+      background: #fff;
+    }
+  }
+  &__navigation {
+    margin-bottom: 24px;
+    @media (min-width: 321px) {
+      margin-bottom: 32px;
+    }
+  }
+  &__about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    @media (min-width: 440px) {
+      flex-direction: row;
+      column-gap: 0;
+    }
+  }
+  &__text {
+    margin-bottom: 56px;
+    padding: 0 16px 0 0;
+    height: 90px;
+    overflow: hidden;
+    p {
+      margin-bottom: 30px;
+      color: $color-text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+    @media (min-width: 440px) {
+      flex: 0 0 50%;
+    }
+    &_show {
+      height: 100%;
+      overflow: unset;
+    }
+  }
+  &__more {
+    top: 105px;
+    left: 10px;
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @media (min-width: 440px) {
+      height: 260px;
+    }
+  }
+}

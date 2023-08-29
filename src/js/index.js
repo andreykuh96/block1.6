@@ -1,0 +1,5 @@
+import '../scss/style.scss'
+import './showText'
+import './swiper'
+import './menu'
+import './showMore'

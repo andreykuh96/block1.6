@@ -1,0 +1,59 @@
+.section-technique {
+  position: relative;
+  padding-top: 16px;
+  @media (min-width: 321px) {
+    padding-bottom: 80px;
+  }
+  &__slider {
+    height: 212px;
+    overflow: hidden;
+    @media (min-width: 321px) {
+      height: 161px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    @media (min-width: 321px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 160px);
+      grid-auto-rows: 160px;
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+    @media (min-width: 376px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 540px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__slide {
+    height: 160px;
+  }
+  &__card {
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+    img {
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__more {
+    display: none;
+    @media (min-width: 321px) {
+      display: block;
+      bottom: 32px;
+    }
+  }
+}

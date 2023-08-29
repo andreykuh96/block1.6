@@ -1,0 +1,22 @@
+.header-services {
+  display: none;
+  @media (min-width: 500px) {
+    padding: 16px;
+    display: flex;
+    color: $color-text--gray;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    opacity: 0.7218;
+    &__title {
+      flex: 1 1 auto;
+    }
+    &__price {
+      margin-right: 22px;
+      width: 74px;
+    }
+    &__deadline {
+      width: 220px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.btn {
+  position: relative;
+  padding: 4px 40px 4px 12px;
+  display: inline-block;
+  border-radius: 16px;
+  background: #ff3e79;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: url('../img/goside.svg') center center/cover no-repeat;
+  }
+}

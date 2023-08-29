@@ -1,0 +1,67 @@
+.section-brands {
+  position: relative;
+  padding: 16px 0 24px 0;
+  @media (min-width: 321px) {
+    padding-bottom: 80px;
+  }
+  .container {
+    padding: 0 0 0 16px;
+    @media (min-width: 321px) {
+      padding: 0 16px;
+    }
+  }
+  &__slider {
+    height: 116px;
+    overflow: hidden;
+    @media (min-width: 321px) {
+      height: 165px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    @media (min-width: 321px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      align-items: center;
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 680px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1000px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__card {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+  }
+  &__logo {
+    max-width: 160px;
+    max-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    object-fit: contain;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__more {
+    display: none;
+    @media (min-width: 321px) {
+      display: block;
+      bottom: 32px;
+    }
+  }
+}
