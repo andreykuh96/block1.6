@@ -46,6 +46,9 @@ button {
   @media (min-width: 769px) {
     .container {
       max-width: 1067px; } }
+  @media (max-width: 767px) {
+    .container {
+      padding: 0; } }
 
 .wrapper {
   position: relative;
@@ -488,13 +491,19 @@ button {
   .section-services__slide {
     position: relative; }
     @media (min-width: 767px) {
+      .section-services__slide {
+        height: 64px; } }
+    .section-services__slide:nth-last-child(1)::before {
+      display: none; }
+    @media (min-width: 767px) {
       .section-services__slide::before {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
+        z-index: 20;
         transform: translateX(-50%);
-        width: 688px;
+        width: 90%;
         height: 1px;
         flex-shrink: 0;
         background: #eaeaea; } }
@@ -506,7 +515,7 @@ button {
     background: #fff; }
     @media (min-width: 767px) {
       .section-services__card {
-        height: 0;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center; }
