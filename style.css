@@ -99,7 +99,9 @@ button {
   .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px; }
     @media (max-width: 768px) {
       .header .container {
         -moz-column-gap: 16.73px;
@@ -107,7 +109,7 @@ button {
   .header__center {
     position: relative;
     padding: 0 20px;
-    width: 544px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -137,9 +139,10 @@ button {
       .header__feedback {
         display: none; } }
   .header__instruments {
-    width: 96px;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -moz-column-gap: 16px;
+         column-gap: 16px; }
     @media (max-width: 768px) {
       .header__instruments {
         -moz-column-gap: 16px;
@@ -349,118 +352,111 @@ button {
 
 .section-brands {
   position: relative;
-  padding: 16px 0 24px 0; }
-  @media (min-width: 321px) {
+  padding-left: 16px; }
+  @media (min-width: 767px) {
     .section-brands {
+      padding-right: 16px;
       padding-bottom: 80px; } }
-  .section-brands .container {
-    padding: 0 0 0 16px; }
-    @media (min-width: 321px) {
-      .section-brands .container {
-        padding: 0 16px; } }
-  .section-brands__slider {
-    height: 116px;
-    overflow: hidden; }
-    @media (min-width: 321px) {
-      .section-brands__slider {
-        height: 165px; } }
+  .section-brands__swiper {
+    height: 112px; }
+    @media (min-width: 767px) {
+      .section-brands__swiper {
+        height: 160px; } }
+    .section-brands__swiper .swiper-pagination {
+      bottom: var(--swiper-pagination-bottom, 0); }
+      @media (min-width: 767px) {
+        .section-brands__swiper .swiper-pagination {
+          display: none; } }
   .section-brands__wrapper {
-    display: flex; }
-    @media (min-width: 321px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 72px);
+    grid-auto-rows: 72px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    row-gap: 16px; }
+    @media (max-width: 767px) {
       .section-brands__wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-items: center;
-        -moz-column-gap: 24px;
-             column-gap: 24px;
-        row-gap: 16px; } }
-    @media (min-width: 480px) {
+        display: flex;
+        gap: 0; } }
+    @media (min-width: 1439.9px) {
       .section-brands__wrapper {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 680px) {
-      .section-brands__wrapper {
-        grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 1000px) {
-      .section-brands__wrapper {
-        grid-template-columns: repeat(4, 1fr); } }
+        grid-template-columns: repeat(4, 1fr);
+        -moz-column-gap: 32px;
+             column-gap: 32px; } }
   .section-brands__card {
     padding: 16px;
+    width: 100%;
+    height: 72px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 6px;
     border: 1px solid #eaeaea;
     background: #fff; }
   .section-brands__logo {
-    max-width: 160px;
-    max-height: 40px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    object-fit: contain; }
-    .section-brands__logo img {
-      width: 100%;
-      height: 100%; }
+    justify-content: center;
+    align-items: center; }
   .section-brands__more {
     display: none; }
-    @media (min-width: 321px) {
+    @media (min-width: 767px) {
       .section-brands__more {
         display: block;
-        bottom: 32px; } }
+        bottom: 24px; } }
 
 .section-technique {
   position: relative;
-  padding-top: 16px; }
-  @media (min-width: 321px) {
+  padding-left: 16px; }
+  @media (min-width: 767px) {
     .section-technique {
+      padding-right: 16px;
       padding-bottom: 80px; } }
-  .section-technique__slider {
-    height: 212px;
-    overflow: hidden; }
-    @media (min-width: 321px) {
-      .section-technique__slider {
-        height: 161px; } }
+  .section-technique__swiper {
+    height: 200px; }
+    @media (min-width: 767px) {
+      .section-technique__swiper {
+        height: 160px; } }
+    .section-technique__swiper .swiper-pagination {
+      bottom: var(--swiper-pagination-bottom, 0); }
+      @media (min-width: 767px) {
+        .section-technique__swiper .swiper-pagination {
+          display: none; } }
   .section-technique__wrapper {
-    display: flex; }
-    @media (min-width: 321px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 160px);
+    grid-auto-rows: 160px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    row-gap: 16px; }
+    @media (max-width: 767px) {
       .section-technique__wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 160px);
-        grid-auto-rows: 160px;
-        -moz-column-gap: 24px;
-             column-gap: 24px;
-        row-gap: 16px; } }
-    @media (min-width: 376px) {
+        display: flex;
+        gap: 0; } }
+    @media (min-width: 1439.9px) {
       .section-technique__wrapper {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 540px) {
-      .section-technique__wrapper {
-        grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 769px) {
-      .section-technique__wrapper {
-        grid-template-columns: repeat(4, 1fr); } }
-  .section-technique__slide {
-    height: 160px; }
+        grid-template-columns: repeat(4, 1fr);
+        -moz-column-gap: 32px;
+             column-gap: 32px; } }
   .section-technique__card {
+    position: relative;
     padding: 16px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: 160px;
     border-radius: 6px;
     border: 1px solid #eaeaea;
     background: #fff; }
-    .section-technique__card img {
-      margin-left: auto;
-      width: 40px;
-      height: 40px; }
+  .section-technique__icon {
+    position: absolute;
+    bottom: 16px;
+    right: 16px; }
   .section-technique__more {
     display: none; }
-    @media (min-width: 321px) {
+    @media (min-width: 767px) {
       .section-technique__more {
         display: block;
-        bottom: 32px; } }
+        bottom: 24px; } }
 
 .section-services {
   color: #1b1c21;
@@ -480,40 +476,42 @@ button {
     font-weight: 500;
     line-height: 16px; }
   .section-services__slider {
+    padding-bottom: 60px;
     margin-bottom: 16px;
     height: 250px; }
     @media (min-width: 500px) {
       .section-services__slider {
         height: 100%; } }
-  @media (min-width: 500px) {
+  @media (min-width: 767px) {
     .section-services__wrapper {
       flex-direction: column; } }
   .section-services__slide {
     position: relative; }
-    .section-services__slide::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 688px;
-      height: 1px;
-      flex-shrink: 0;
-      background: #eaeaea; }
+    @media (min-width: 767px) {
+      .section-services__slide::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 688px;
+        height: 1px;
+        flex-shrink: 0;
+        background: #eaeaea; } }
   .section-services__card {
+    position: relative;
     padding: 24px 16px;
+    height: 200px;
     border-radius: 6px;
     background: #fff; }
-    @media (min-width: 500px) {
+    @media (min-width: 767px) {
       .section-services__card {
+        height: 0;
         display: flex;
         justify-content: space-between;
         align-items: center; }
         .section-services__card span {
           display: none; } }
-    @media (max-width: 320px) {
-      .section-services__card {
-        min-height: 200px; } }
   .section-services__title {
     margin-bottom: 16px; }
     @media (min-width: 321px) {
@@ -540,9 +538,9 @@ button {
       margin-bottom: 0; } }
   .section-services__btn {
     position: absolute;
-    bottom: 60px;
+    bottom: 16px;
     right: 16px; }
-    @media (min-width: 500px) {
+    @media (min-width: 767px) {
       .section-services__btn {
         bottom: 50%;
         transform: translateY(50%);
