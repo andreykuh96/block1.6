@@ -1,39 +1,110 @@
-const swiperBrands = new Swiper('.section-brands__slider', {
-  init: false,
-  spaceBetween: 16,
-  slidesPerView: 1.3,
-  pagination: {
-    el: '.section-brands__pagination'
-  }
-})
+window.addEventListener('DOMContentLoaded', () => {
+  const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
+    let swiper
 
-const swiperTechnique = new Swiper('.section-technique__slider', {
-  init: false,
-  spaceBetween: 16,
-  slidesPerView: 1.3,
-  pagination: {
-    el: '.section-technique__pagination'
-  }
-})
+    breakpoint = window.matchMedia(breakpoint)
 
-const swiperServices = new Swiper('.section-services__slider', {
-  init: false,
-  spaceBetween: 16,
-  slidesPerView: 1.1,
-  width: 300,
-  pagination: {
-    el: '.section-services__pagination'
-  }
-})
+    const enableSwiper = function (className, settings) {
+      swiper = new Swiper(className, settings)
+    }
 
-window.addEventListener('resize', () => {
-  if (window.innerWidth <= 321) {
-    swiperBrands.init()
-    swiperTechnique.init()
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings)
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true)
+        return
+      }
+    }
+
+    breakpoint.addEventListener('change', checker)
+    checker()
   }
-})
-window.addEventListener('resize', () => {
-  if (window.innerWidth <= 500) {
-    swiperServices.init()
-  }
+
+  //brands
+
+  resizableSwiper('(max-width: 767px)', '.section-brands__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 700px)', '.section-brands__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 2.1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 480px)', '.section-brands__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 1.3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  //technique
+
+  resizableSwiper('(max-width: 767px)', '.section-technique__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 700px)', '.section-technique__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 2.1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 480px)', '.section-technique__swiper', {
+    spaceBetween: 16,
+    slidesPerView: 1.3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  //services
+
+  resizableSwiper('(max-width: 767px)', '.section-services__slider', {
+    spaceBetween: 16,
+    slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 700px)', '.section-services__slider', {
+    spaceBetween: 16,
+    slidesPerView: 2.1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  resizableSwiper('(max-width: 480px)', '.section-services__slider', {
+    spaceBetween: 16,
+    slidesPerView: 1.3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
 })

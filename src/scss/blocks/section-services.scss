@@ -18,48 +18,48 @@
     line-height: 16px;
   }
   &__slider {
+    padding-bottom: 60px;
     margin-bottom: 16px;
     height: 250px;
-    // @media (min-width: 321px) {
-    //   height: 250px;
-    // }
     @media (min-width: 500px) {
       height: 100%;
     }
   }
   &__wrapper {
-    @media (min-width: 500px) {
+    @media (min-width: 767px) {
       flex-direction: column;
     }
   }
   &__slide {
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 688px;
-      height: 1px;
-      flex-shrink: 0;
-      background: #eaeaea;
+    @media (min-width: 767px) {
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 688px;
+        height: 1px;
+        flex-shrink: 0;
+        background: #eaeaea;
+      }
     }
   }
   &__card {
+    position: relative;
     padding: 24px 16px;
+    height: 200px;
     border-radius: 6px;
     background: #fff;
-    @media (min-width: 500px) {
+    @media (min-width: 767px) {
+      height: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       span {
         display: none;
       }
-    }
-    @media (max-width: 320px) {
-      min-height: 200px;
     }
   }
   &__title {
@@ -92,9 +92,9 @@
   }
   &__btn {
     position: absolute;
-    bottom: 60px;
+    bottom: 16px;
     right: 16px;
-    @media (min-width: 500px) {
+    @media (min-width: 767px) {
       bottom: 50%;
       transform: translateY(50%);
       right: 16px;
