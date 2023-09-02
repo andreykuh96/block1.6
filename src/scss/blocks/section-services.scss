@@ -33,13 +33,22 @@
   &__slide {
     position: relative;
     @media (min-width: 767px) {
+      height: 64px;
+    }
+    &:nth-last-child(1) {
+      &::before {
+        display: none;
+      }
+    }
+    @media (min-width: 767px) {
       &::before {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
+        z-index: 20;
         transform: translateX(-50%);
-        width: 688px;
+        width: 90%;
         height: 1px;
         flex-shrink: 0;
         background: #eaeaea;
@@ -53,7 +62,7 @@
     border-radius: 6px;
     background: #fff;
     @media (min-width: 767px) {
-      height: 0;
+      height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
