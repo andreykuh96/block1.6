@@ -46,9 +46,6 @@ button {
   @media (min-width: 769px) {
     .container {
       max-width: 1067px; } }
-  @media (max-width: 767px) {
-    .container {
-      padding: 0; } }
 
 .wrapper {
   position: relative;
@@ -153,7 +150,7 @@ button {
         padding-left: 3.37px; } }
 
 .my-hr {
-  padding: 16px 0 16px 24px;
+  padding: 16px 0;
   background: linear-gradient(90deg, #f8f8f8 0%, #fff 100%);
   border-top: 1px solid #d9fff5; }
   .my-hr__text {
@@ -218,6 +215,10 @@ button {
   padding: 24px 0;
   background-color: #f8f8f8; }
 
+@media (max-width: 440px) {
+  .section-promo .container {
+    padding: 0; } }
+
 .section-promo__title-wrapper {
   display: flex;
   justify-content: space-between;
@@ -225,6 +226,9 @@ button {
   @media (min-width: 1330px) {
     .section-promo__title-wrapper {
       margin-bottom: 8px; } }
+  @media (max-width: 440px) {
+    .section-promo__title-wrapper {
+      padding: 0 16px; } }
 
 .section-promo__title {
   margin-bottom: 24px;
@@ -306,6 +310,9 @@ button {
   @media (min-width: 321px) {
     .section-promo__navigation {
       margin-bottom: 32px; } }
+  @media (max-width: 440px) {
+    .section-promo__navigation {
+      padding: 0 16px; } }
 
 .section-promo__about {
   position: relative;
@@ -336,6 +343,9 @@ button {
   @media (min-width: 440px) {
     .section-promo__text {
       flex: 0 0 50%; } }
+  @media (max-width: 440px) {
+    .section-promo__text {
+      padding: 0 16px; } }
   .section-promo__text_show {
     height: 100%;
     overflow: unset; }
@@ -360,6 +370,9 @@ button {
     .section-brands {
       padding-right: 16px;
       padding-bottom: 80px; } }
+  @media (max-width: 767px) {
+    .section-brands .container {
+      padding: 0; } }
   .section-brands__swiper {
     height: 112px; }
     @media (min-width: 767px) {
@@ -409,8 +422,7 @@ button {
         bottom: 24px; } }
 
 .section-technique {
-  position: relative;
-  padding-left: 16px; }
+  position: relative; }
   @media (min-width: 767px) {
     .section-technique {
       padding-right: 16px;
@@ -468,10 +480,7 @@ button {
   line-height: 18px;
   letter-spacing: 0.2px; }
   .section-services .container {
-    padding: 0 0 0 8px; }
-    @media (min-width: 321px) {
-      .section-services .container {
-        padding: 0 16px; } }
+    padding: 0 0 0 16px; }
   .section-services span {
     margin-bottom: 4px;
     color: #73737d;
@@ -556,7 +565,6 @@ button {
         right: 16px; } }
   .section-services__text {
     margin: 0 0 16px 0;
-    padding: 0 16px;
     max-width: 450px;
     color: #1b1c21;
     font-size: 14px;
