@@ -1,10 +1,18 @@
 .section-promo {
+  .container {
+    @media (max-width: 440px) {
+      padding: 0;
+    }
+  }
   &__title-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     @media (min-width: 1330px) {
       margin-bottom: 8px;
+    }
+    @media (max-width: 440px) {
+      padding: 0 16px;
     }
   }
   &__title {
@@ -86,6 +94,9 @@
     @media (min-width: 321px) {
       margin-bottom: 32px;
     }
+    @media (max-width: 440px) {
+      padding: 0 16px;
+    }
   }
   &__about {
     position: relative;
@@ -115,6 +126,9 @@
     }
     @media (min-width: 440px) {
       flex: 0 0 50%;
+    }
+    @media (max-width: 440px) {
+      padding: 0 16px;
     }
     &_show {
       height: 100%;

@@ -5,6 +5,11 @@
     padding-right: 16px;
     padding-bottom: 80px;
   }
+  .container {
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
   &__swiper {
     height: 112px;
     @media (min-width: 767px) {
