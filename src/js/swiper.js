@@ -25,28 +25,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   resizableSwiper('(max-width: 767px)', '.section-brands__swiper', {
     spaceBetween: 16,
-    slidesPerView: 3,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 700px)', '.section-brands__swiper', {
-    spaceBetween: 16,
-    slidesPerView: 2.1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 480px)', '.section-brands__swiper', {
-    spaceBetween: 16,
     slidesPerView: 1.3,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination__brands',
       clickable: true
+    },
+    breakpoints: {
+      321: {
+        slidesPerView: 1.5
+      },
+      450: {
+        slidesPerView: 2
+      },
+      650: {
+        slidesPerView: 3
+      }
     }
   })
 
@@ -54,28 +47,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   resizableSwiper('(max-width: 767px)', '.section-technique__swiper', {
     spaceBetween: 16,
-    slidesPerView: 3,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 700px)', '.section-technique__swiper', {
-    spaceBetween: 16,
-    slidesPerView: 2.1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 480px)', '.section-technique__swiper', {
-    spaceBetween: 16,
     slidesPerView: 1.3,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination__technique',
       clickable: true
+    },
+    breakpoints: {
+      321: {
+        slidesPerView: 1.5
+      },
+      450: {
+        slidesPerView: 2
+      },
+      650: {
+        slidesPerView: 3
+      }
     }
   })
 
@@ -83,28 +69,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
   resizableSwiper('(max-width: 767px)', '.section-services__slider', {
     spaceBetween: 16,
-    slidesPerView: 3,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 700px)', '.section-services__slider', {
-    spaceBetween: 16,
-    slidesPerView: 2.1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  })
-
-  resizableSwiper('(max-width: 480px)', '.section-services__slider', {
-    spaceBetween: 16,
     slidesPerView: 1.3,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.section-services__pagination',
       clickable: true
+    },
+    breakpoints: {
+      321: {
+        slidesPerView: 1.5
+      },
+      450: {
+        slidesPerView: 2
+      },
+      650: {
+        slidesPerView: 3
+      }
     }
   })
 })

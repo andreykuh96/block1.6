@@ -4,6 +4,27 @@
     padding-right: 16px;
     padding-bottom: 80px;
   }
+  @media (max-width: 767px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 0;
+      z-index: 2;
+      width: 24px;
+      height: 160px;
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0) 100%
+      );
+    }
+  }
+  .container {
+    @media (max-width: 767px) {
+      padding-left: 16px;
+    }
+  }
   &__swiper {
     height: 200px;
     @media (min-width: 767px) {
@@ -35,6 +56,7 @@
   }
 
   &__slide {
+    min-width: 240px;
   }
 
   &__card {
